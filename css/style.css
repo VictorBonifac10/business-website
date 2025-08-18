@@ -1,7 +1,10 @@
-@import "tailwindcss";
+/*Imports*/
 
+@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+/*All*/
 
 * {
     margin: 0;
@@ -9,6 +12,8 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+
+/*Header*/
 
 header {
     padding: 0px 100px 20px 100px;
@@ -33,6 +38,8 @@ input {
     border: 1px solid #fff;
 }
 
+/*Effect one*/
+
 .levitating {
     animation: levitating 5s ease-in-out infinite;
 }
@@ -49,14 +56,10 @@ input {
     }
 }
 
+/*Effect two*/
+
 .box:hover {
     background-color: rgb(0, 0, 40);
     color: #fff;
     transition: 0.5s;
-}
-
-.box-effect:hover {
-    background-color: rgb(240, 240, 240);
-    color: rgb(204, 102, 34) !important;
-    transition: 0.1s;
 }
