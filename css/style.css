@@ -63,3 +63,19 @@ input {
     color: #fff;
     transition: 0.5s;
 }
+
+/*Responsive*/
+
+.hero-article {
+    padding: 0.5rem;
+    margin-top: 15px;
+}
+
+@media (min-width: 1024px) {
+    .hero-article {
+        padding: 40px;
+        margin-top: 30px;
+    }
+
+    /* desktop = p-5 */
+}
