@@ -12,6 +12,7 @@ Projeto de landing page responsiva criado exclusivamente com HTML5, TailwindCSS 
 - HTML5
 - CSS3
 - TailwindCSS
+- JavaScript
 - Design responsivo
 - Código limpo e organizado
 
