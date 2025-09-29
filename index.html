@@ -17,7 +17,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Favicon -->
     <link rel="icon" href="./assets/img/logo.svg" type="image/x-icon">
-    <title>Business Website</title>
+    <title>Sir Wallet Bank</title>
 </head>
 
 <body class="h-[100vh]">
@@ -29,50 +29,67 @@
         <div class="mask w-full h-full absolute top-0 left-0 z-1"></div>
         <article
             class="hero-article relative z-10 text-center lg:text-start space-y-3 flex flex-col items-center lg:items-start">
-            <h1 class="text-white text-3xl font-bold">
-                FlatVault<span class="text-orange-500">.</span>
-            </h1>
-            <h2 class="text-sm text-white font-semibold lg:text-start">
-                Invest in the stock market
-            </h2>
-            <h3 class="text-sm text-white lg:text-start">
-                with a ultimate design and features
-            </h3>
-            <p class="text-white text-sm max-w-md lg:text-start">
+            <div class="flex gap-3 items-center mb-3">
+                <img src="./assets/img/new-logo.png" class="w-80" alt="">
+            </div>
+            <h5 class="text-white lg:text-start">
+                Classy Banking for Modern Times.
+            </h5>
+            <p class="text-white text-sm mt-4 max-w-md lg:text-start hidden sm:block">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, ad omnis? Incidunt recusandae sequi
+                unde harum, sit amet, consectetur adipisicing elit. Quaerat, ad omnis? Incidunt recusandae sequi
+                unde harum.
+                <br><br>
                 unde harum, expedita deserunt temporibus iusto modi quaerat sed illum natus animi, nihil veritatis vel
-                eos?
+                eos ▼
             </p>
-            <button type="button"
+            <a href="#benefits"
                 class="bg-[rgb(204,102,34)] text-white mt-4 px-4 py-2 rounded max-w-[200px] transition-all hover:scale-105 hover:bg-gray-400">
                 View Details
-            </button>
+            </a>
         </article>
         <!-- Formulário -->
         <section class="relative z-10 flex justify-center h-[580px]">
             <form class="bg-gray-200 rounded-b-xl shadow-lg w-full max-w-md">
                 <header class="bg-[rgb(204,102,34)] p-3 text-center">
                     <p class="text-white text-base">
-                        Join with us now & get instant access for 30 days
+                        See how much the real is worth today:
                     </p>
                 </header>
                 <div class="flex flex-col gap-2 p-3 pb-0">
-                    <input type="text" placeholder="First-name" class="bg-white rounded-4xl p-2 w-full" />
-                    <input type="text" placeholder="Last-name" class="bg-white rounded-4xl p-2 w-full" />
-                    <input type="email" placeholder="Email" class="bg-white rounded-4xl p-2 w-full" />
-                    <input type="phone" placeholder="Phone" class="bg-white rounded-4xl p-2 w-full" />
-                    <select class="bg-white rounded-4xl p-2 w-full text-gray-400" required>
-                        <option value="" disabled selected>Selecione um país</option>
-                        <option>Brazil</option>
-                        <option>United States</option>
-                        <option>Spain</option>
-                        <option>Japan</option>
+
+                    <select id="convertFrom" class="bg-white rounded-4xl p-2 w-full text-gray-400" required>
+                        <option value="#" disabled selected>Convert from</option>
+                        <option value="Real">R$ Brazilian Real</option>
                     </select>
 
-                    <button type="submit"
-                        class="bg-[rgb(204,102,34)] mt-4 text-white p-2 rounded w-full transition-all hover:scale-105 hover:bg-gray-400">
-                        Submit
+                    <select id="convertTo" class="bg-white rounded-4xl p-2 w-full text-gray-400" required>
+                        <option value="#" disabled selected>Convert to</option>
+                        <option value="Dollar">US$ American Dollar</option>
+                        <option value="Euro">€ Euro</option>
+                        <option value="Bitcoin">₿ Bitcoin</option>
+                    </select>
+
+                    <input id="value" type="number" placeholder="Value" class="bg-white rounded-4xl p-2 w-full" />
+
+                    <button type="button" id="convertBtn"
+                        class="bg-[rgb(204,102,34)] mt-2 text-white p-2 rounded w-full transition-all hover:scale-105 hover:bg-gray-400">
+                        Convert
                     </button>
+                    <div
+                        class="flex flex-col gap-1 justify-center items-center p-1 border-1 border-[rgb(204,102,34)] rounded">
+                        <div class="flex flex-col justify-center items-center">
+                            <img src="./assets/img/real.png" class="img w-6" alt="coin">
+                            <p class="text-xs text-gray-600 m-0">Real</p>
+                            <p class="realValue m-0 text-gray-600 text-xs">R$ 0,00</p>
+                        </div>
+                        <i class="ri-arrow-up-down-line text-[rgb(204,102,34)]"></i>
+                        <div class="flex flex-col justify-center items-center">
+                            <img src="./assets/img/dollar.png" class="img w-6" alt="coin">
+                            <p class="resultName text-xs text-gray-600 m-0">Dollar</p>
+                            <p class="resultValue m-0 text-gray-600 text-xs">0,00</p>
+                        </div>
+                    </div>
                 </div>
             </form>
         </section>
@@ -85,26 +102,26 @@
                 <!-- Card 1 -->
                 <div
                     class="flex gap-2 justify-center items-center p-3 w-full bg-[rgb(255,151,81)] transition-all hover:scale-105 hover:bg-blue-950">
-                    <i class="ri-leaf-fill text-white"></i>
-                    <p class="leading-none text-lg text-white m-0">BrandLine</p>
+                    <i class="ri-bank-fill text-white"></i>
+                    <p class="leading-none text-lg text-white m-0">Savings</p>
                 </div>
                 <!-- Card 2 -->
                 <div
                     class="flex gap-2 justify-center items-center p-3 w-full bg-[rgb(255,151,81)] transition-all hover:scale-105 hover:bg-blue-950">
-                    <i class="ri-leaf-fill text-white"></i>
-                    <p class="leading-none text-lg text-white m-0">BrandLine</p>
+                    <i class="ri-bank-card-fill text-white"></i>
+                    <p class="leading-none text-lg text-white m-0">Cards</p>
                 </div>
                 <!-- Card 3 -->
                 <div
                     class="flex gap-2 items-center justify-center p-3 w-full bg-[rgb(255,151,81)] transition-all hover:scale-105 hover:bg-blue-950">
-                    <i class="ri-leaf-fill text-white"></i>
-                    <p class="leading-none text-lg text-white m-0">BrandLine</p>
+                    <i class="ri-exchange-dollar-line text-white"></i>
+                    <p class="leading-none text-lg text-white m-0">Exchange</p>
                 </div>
                 <!-- Card 4 -->
                 <div
                     class="flex gap-2 justify-center items-center p-3 w-full bg-[rgb(255,151,81)] transition-all hover:scale-105 hover:bg-blue-950">
-                    <i class="ri-leaf-fill text-white"></i>
-                    <p class="leading-none text-lg text-white m-0">BrandLine</p>
+                    <i class="ri-shake-hands-fill text-white"></i>
+                    <p class="leading-none text-lg text-white m-0">Loans</p>
                 </div>
             </article>
         </section>
@@ -113,47 +130,51 @@
             <section class="container bg-white p-5 mt-5 mb-5">
                 <article class="container flex justify-center items-center pb-4 max-md:flex-col">
                     <div class="container">
-                        <h2 class="text-blue-950 font-semibold max-md:text-center">Number 1 in the business world</h2>
+                        <p class="text-blue-950 mb-3 text-3xl font-semibold max-md:text-center">Your Wallet, One Click
+                            Away
+                        </p>
                         <p class="text-blue-950 text-justify mt-3 text-sm max-w-full max-md:text-center">Lorem
                             ipsum dolor, sit ametconsectetur adipisicing elit. Quaerat, ad omnis? Incidunt
                             recusandaesequi
                             unde harum, expeditadeserunt temporibus iusto modi quaerat sed illum natus animi, nihil
                             veritatis vel eos?</p>
-                        <div class="box-second-main p-0 mt-4">
+                        <div class="flex flex-col gap-3 box-second-main p-0 mt-2">
                             <div
-                                class="flex gap-3 items-center p-3 box-effect rounded-full max-md:flex-col max-md:items-center max-md:text-center transition-all hover:scale-105 hover:bg-gray-200">
+                                class="flex gap-3 items-center p-2 box-effect rounded-full max-md:flex-col max-md:items-center max-md:text-center transition-all hover:scale-105 hover:bg-gray-200">
                                 <i
                                     class="ri-number-1  not-last:rounded-full w-full h-full max-w-8 max-h-8 flex justify-center items-center bg-[rgb(204,102,34)] text-white"></i>
                                 <div class="flex flex-col gap-[-10]">
-                                    <p class="text-sm font-semibold p-0 m-0">Desktop & Mobile Version</p>
-                                    <p class="text-sm p-0 m-0">Lorem ipsum dolor sit amet consectetur</p>
+                                    <p class="text-blue-950 text-sm font-semibold p-0 m-0">Secure Login</p>
+                                    <p class="text-blue-950 text-sm p-0 m-0">Lorem ipsum dolor sit amet consectetur</p>
                                 </div>
                             </div>
                             <div
-                                class="flex gap-3 items-center p-3 box-effect rounded-full max-md:flex-col max-md:items-center max-md:text-center transition-all hover:scale-105 hover:bg-gray-200">
+                                class="flex gap-3 items-center p-2 box-effect rounded-full max-md:flex-col max-md:items-center max-md:text-center transition-all hover:scale-105 hover:bg-gray-200">
                                 <i
                                     class="ri-number-2 not-last:rounded-full w-full h-full max-w-8 max-h-8 flex justify-center items-center bg-[rgb(204,102,34)] text-white"></i>
                                 <div class="flex flex-col gap-[-10]">
-                                    <p class="text-sm font-semibold p-0 m-0">Builder Awesome</p>
-                                    <p class="text-sm p-0 m-0">Veritatis porro magnam expedita voluptas tenetur</p>
+                                    <p class="text-blue-950 text-sm font-semibold p-0 m-0">Fast Transfers</p>
+                                    <p class="text-blue-950 text-sm p-0 m-0">Veritatis porro magnam expedita voluptas
+                                        tenetur</p>
                                 </div>
                             </div>
                             <div
-                                class="flex gap-3 items-center p-3 box-effect rounded-full max-md:flex-col max-md:items-center max-md:text-center transition-all hover:scale-105 hover:bg-gray-200">
+                                class="flex gap-3 items-center p-2 box-effect rounded-full max-md:flex-col max-md:items-center max-md:text-center transition-all hover:scale-105 hover:bg-gray-200">
                                 <i
                                     class="ri-number-3 not-last:rounded-full w-full h-full max-w-8 max-h-8 flex justify-center items-center bg-[rgb(204,102,34)] text-white"></i>
                                 <div class="flex flex-col gap-[-10]">
-                                    <p class="text-sm font-semibold p-0 m-0">Modern Design</p>
-                                    <p class="text-sm p-0 m-0">Esse illo dignissimos consequatur</p>
+                                    <p class="text-blue-950 text-sm font-semibold p-0 m-0">Real-time Rates</p>
+                                    <p class="text-blue-950 text-sm p-0 m-0">Esse illo dignissimos consequatur</p>
                                 </div>
                             </div>
                             <div
-                                class="flex gap-3 items-center p-3 box-effect rounded-full max-md:flex-col max-md:items-center max-md:text-center transition-all hover:scale-105 hover:bg-gray-200">
+                                class="flex gap-3 items-center p-2 box-effect rounded-full max-md:flex-col max-md:items-center max-md:text-center transition-all hover:scale-105 hover:bg-gray-200">
                                 <i
                                     class="ri-number-4 not-last:rounded-full w-full h-full max-w-8 max-h-8 flex justify-center items-center bg-[rgb(204,102,34)] text-white"></i>
                                 <div class="flex flex-col gap-[-10]">
-                                    <p class="text-sm font-semibold p-0 m-0">Super easey to Edit</p>
-                                    <p class="text-sm p-0 m-0">Animi cumque consequuntur, officiis delectus ipsa</p>
+                                    <p class="text-blue-950 text-sm font-semibold p-0 m-0">24/7 Access</p>
+                                    <p class="text-blue-950 text-sm p-0 m-0">Animi cumque consequuntur, officiis
+                                        delectus ipsa</p>
                                 </div>
                             </div>
                         </div>
@@ -161,8 +182,8 @@
                     <div class="levitating container p-2 flex flex-col justify-center items-center mt-3">
                         <div class="bg-gray-200 flex flex-col justify-center items-center rounded-2xl w-70 h-120 p-2">
                             <div class="w-12 h-1 bg-gray-400 rounded-full mb-1"></div>
-                            <div class="flex justify-center items-center bg-[rgb(204,102,34)] m-1 mt-2 w-60 h-98 p-5">
-                                <h1 class="logo text-white">FlatVault<span class="text-orange-500">.</span></h1>
+                            <div class="flex justify-center items-center bg-[rgb(204,102,34)] m-1 mt-2 w-60 h-98 p-2">
+                                <p class="text-white text-2xl">Sir Wallet Bank<span class="text-orange-500">.</span></p>
                             </div>
                             <div class="w-6 h-6 bg-gray-400 rounded-full mt-2"></div>
                         </div>
@@ -174,7 +195,8 @@
         <div data-aos="fade-up" data-aos-duration="2000">
             <section
                 class="container bg-[rgb(204,102,34)] pt-5 pb-3 mt-5 mb-5 flex flex-col justify-center items-center">
-                <p class="text-3xl font-semibold p-0 mb-3 text-white max-md:text-center">Desktop & Mobile Version</p>
+                <p class="text-3xl font-semibold p-0 mb-3 text-white max-md:text-center">Control & Freedom for Your
+                    Wallet</p>
                 <p class="text-sm p-0 m-0 text-center max-w-150 text-white">Lorem ipsum dolor sit amet consectetur,
                     adipisicing elit. Dolores nostrum nihil sunt tenetur delectus vitae quis ab perspiciatis laboriosam
                     qui
@@ -183,11 +205,10 @@
                 <img src="./assets/img/computer.svg" class="p-3" width="500px" alt="computer">
             </section>
         </div>
-        <!--Benifits Section-->
+        <!--Benefits Section-->
         <div data-aos="fade-up" data-aos-duration="2000">
-            <section class="container bg-white p-5 mt-5 mb-5 flex flex-col justify-center items-center">
-                <p class="text-3xl font-semibold p-0 mb-3 text-blue-950 max-md:text-center">Benifits you will love &
-                    enjoy
+            <section id="benefits" class="container bg-white p-5 mt-5 mb-5 flex flex-col justify-center items-center">
+                <p class="text-3xl font-semibold p-0 mb-3 text-blue-950 max-md:text-center">More Benefits, Less Hassle
                 </p>
                 <p class="text-sm p-0 m-0 text-center max-w-150 text-blue-950">Lorem ipsum dolor sit amet consectetur,
                     adipisicing elit. Dolores nostrum nihil sunt tenetur delectus vitae quis ab perspiciatis laboriosam
@@ -214,7 +235,7 @@
                     <div
                         class="flex flex-col justify-center items-center p-0 transition-all hover:scale-105 hover:bg-gray-200">
                         <img src="./assets/img/network.svg" class="p-4" width="200px" alt="img">
-                        <p class="text-base font-semibold mt-3 mb-0 text-blue-950">Network for group</p>
+                        <p class="text-base font-semibold mt-3 mb-0 text-blue-950">Team Up & Earn</p>
                         <p class="text-sm p-2 mt-0 mb-3 text-center max-w-70 text-blue-950">Lorem ipsum dolor sit amet
                             consectetur, adipisicing elit.
                         </p>
@@ -234,8 +255,7 @@
                             corrupti, perspiciatis laboriosam qui totam mollitiadebitis ipsum hic porro, rem excepturi.
                             Nesciunt, corrupti!"</p>
                         <p class="text-base p-2 font-bold mt-2 text-blue-950 max-md:text-center"> Jonathan Doe |
-                            FlatVault
-                            Client</p>
+                            Sir Wallet Client</p>
                     </div>
                 </article>
             </section>
@@ -247,45 +267,42 @@
                     <div
                         class="bg-gray-200 flex flex-col justify-center items-center p-3 w-full transition-all hover:scale-105">
                         <p
-                            class="card-price-text p-2 bg-[rgb(204,102,34)] m-2 rounded-full w-35 h-35 flex justify-center items-center text-white text-5xl">
+                            class="font-lobster p-2 bg-[rgb(204,102,34)] m-2 rounded-full w-35 h-35 flex justify-center items-center text-white text-5xl">
                             $55</p>
-                        <p class="text-lg font-bold text-blue-950 mt-2">Basic Pricing</p>
+                        <p class="text-lg font-bold text-blue-950 mt-2">Basic Account</p>
                         <div class="w-20 h-1 bg-orange-300 rounded-full mb-1"></div>
                         <ul class="flex flex-col justify-center items-center list-none p-3 gap-2">
-                            <li class="text-sm text-blue-950">Blog Page</li>
-                            <li class="text-sm text-blue-950">Frameworks for company</li>
-                            <li class="text-sm text-blue-950">Dashboards feedback</li>
-                            <li class="text-sm text-blue-950">Database Category</li>
+                            <li class="text-sm text-blue-950">Easy Access</li>
+                            <li class="text-sm text-blue-950">Debit Card</li>
+                            <li class="text-sm text-blue-950">24/7 Support</li>
                         </ul>
                         <button class="box p-3 bg-[rgb(204,102,34)] text-white">View Details</button>
                     </div>
                     <div
                         class="levitating bg-[rgb(204,102,34)] flex flex-col justify-center items-center p-3 w-full transition-all hover:scale-105">
                         <p
-                            class="card-price-text p-2 bg-gray-100 m-2 rounded-full w-35 h-35 flex justify-center items-center text-blue-950 text-5xl">
+                            class="font-lobster p-2 bg-gray-100 m-2 rounded-full w-35 h-35 flex justify-center items-center text-blue-950 text-5xl">
                             $75</p>
-                        <p class="text-lg font-bold text-blue-950 mt-2">Pro Pricing</p>
+                        <p class="text-lg font-bold text-blue-950 mt-2">Premium Account</p>
                         <div class="w-20 h-1 bg-orange-300 rounded-full mb-1"></div>
                         <ul class="flex flex-col justify-center items-center list-none p-3 gap-2">
-                            <li class="text-sm text-white">Blog Page</li>
-                            <li class="text-sm text-white">Frameworks for company</li>
-                            <li class="text-sm text-white">Dashboards feedback</li>
-                            <li class="text-sm text-white">Database Category</li>
+                            <li class="text-sm text-white">Higher Limits</li>
+                            <li class="text-sm text-white">Rewards Program</li>
+                            <li class="text-sm text-white">Priority Support</li>
                         </ul>
                         <button class="box p-3 bg-[rgb(255,255,255)] text-blue-950">View Details</button>
                     </div>
                     <div
                         class="bg-gray-200 flex flex-col justify-center items-center p-3 w-full transition-all hover:scale-105">
                         <p
-                            class="card-price-text p-2 bg-[rgb(204,102,34)] m-2 rounded-full w-35 h-35 flex justify-center items-center text-white text-5xl">
+                            class="font-lobster p-2 bg-[rgb(204,102,34)] m-2 rounded-full w-35 h-35 flex justify-center items-center text-white text-5xl">
                             $100</p>
-                        <p class="text-lg font-bold text-blue-950 mt-2">Elite Pricing</p>
+                        <p class="text-lg font-bold text-blue-950 mt-2">business Account</p>
                         <div class="w-20 h-1 bg-orange-300 rounded-full mb-1"></div>
                         <ul class="flex flex-col justify-center items-center list-none p-3 gap-2">
-                            <li class="text-sm text-blue-950">Blog Page</li>
-                            <li class="text-sm text-blue-950">Frameworks for company</li>
-                            <li class="text-sm text-blue-950">Dashboards feedback</li>
-                            <li class="text-sm text-blue-950">Database Category</li>
+                            <li class="text-sm text-blue-950">Multiple Users</li>
+                            <li class="text-sm text-blue-950">Advanced Analytics</li>
+                            <li class="text-sm text-blue-950">International Transfers</li>
                         </ul>
                         <button class="box p-3 bg-[rgb(204,102,34)] text-white">View Details</button>
                     </div>
@@ -294,8 +311,7 @@
         </div>
         <!--Contact Section-->
         <section class="bg-blue-950 pt-5 pb-5 flex flex-col justify-center items-center m-0 w-full">
-            <p class="text-3xl font-semibold p-0 mb-3 text-white max-md:text-center">Join us now for a 30 day free
-                trial
+            <p class="text-3xl font-semibold p-0 mb-3 text-white max-md:text-center">Join Us & Manage Your Money
             </p>
             <p class="text-sm p-0 m-0 text-center max-w-150 text-white">Lorem ipsum dolor sit amet consectetur,
                 adipisicing elit. Dolores nostrum nihil sunt tenetur delectus vitae quis ab perspiciatis laboriosam
@@ -320,12 +336,12 @@
     </main>
     <!--Footer-->
     <footer class="bg-blue-950 p-4 flex justify-center items-center m-0 w-full">
-        <p class="text-sm text-white">© 2025 FlatVault - All rights reserved.</p>
+        <p class="text-sm text-white">© 2025 Sir Wallet Bank - All rights reserved.</p>
     </footer>
     <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!--JS File-->
-    <script>AOS.init();</script>
+    <script src="./script/script.js"></script>
     <!--Bootstrap Link-->
     <script src="./bootstrap/js/bootstrap.js"></script>
     <script src="./bootstrap/js/bootstrap.min.js"></script>
