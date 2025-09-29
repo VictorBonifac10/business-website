@@ -5,7 +5,7 @@ Projeto de landing page responsiva criado exclusivamente com HTML5, TailwindCSS 
 
 <img src="./assets/readme/readme.png" alt="preview" width="500" />
 
-🔗 [Acesse aqui a versão online](https://flatvault.netlify.app/)
+🔗 [Acesse aqui a versão online](https://sirwalletbank.netlify.app/)
 
 ## ✨ Recursos
 
