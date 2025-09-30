@@ -15,7 +15,7 @@
     font-family: "Poppins", sans-serif;
 }
 
-.font-lobster{
+.font-lobster {
     font-family: "Lobster", sans-serif;
     font-style: italic;
 }
@@ -73,10 +73,19 @@ input {
 }
 
 @media (min-width: 1024px) {
+
     .hero-article {
         padding: 40px;
         margin-top: 30px;
     }
+}
 
-    /* desktop = p-5 */
+@media (max-width: 540px) {
+    .img {
+        width: 20px
+    }
+
+    .size {
+        font-size: 10px;
+    }
 }
