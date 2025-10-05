@@ -48,7 +48,7 @@ convertBtn.addEventListener('click', async () => {
 convertTo.addEventListener('change', () => {
 
     const resultName = document.querySelector('.resultName')
-    const img = document.querySelector('.img')
+    const img = document.querySelector('#img')
 
     if (convertTo.value === 'Dollar') {
 
